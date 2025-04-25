@@ -40,6 +40,19 @@
           search
         </mat-icon>
       </mat-form-field>
+      <mat-form-field class="input-container" appearance="outline">
+        <mat-label>Data de Ida</mat-label>
+        <input matInput [matDatepicker]="dataIda">
+        <mat-datepicker-toggle matIconSuffix [for]="dataIda"></mat-datepicker-toggle>
+        <mat-datepicker #dataIda></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="input-container" appearance="outline">
+        <mat-label>Data de volta</mat-label>
+        <input matInput [matDatepicker]="dataVolta">
+        <mat-datepicker-toggle matIconSuffix [for]="dataVolta"></mat-datepicker-toggle>
+        <mat-datepicker #dataVolta></mat-datepicker>
+      </mat-form-field>
+      <button mat-flat-button color="primary">Buscar</button>
     </div>
   </form>
 </app-card>

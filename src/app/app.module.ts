@@ -14,6 +14,7 @@ import { MatCardModule  } from '@angular/material/card';
 import { ContainerComponent } from './shared/container/container.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CardBuscaComponent } from './shared/card-busca/card-busca.component';
+import { CardDepoimentosComponent } from './shared/card-depoimentos/card-depoimentos.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CardBuscaComponent } from './shared/card-busca/card-busca.component';
     CardComponent,
     ContainerComponent,
     HomeComponent,
-    CardBuscaComponent
+    CardBuscaComponent,
+    CardDepoimentosComponent
   ],
   imports: [
     BrowserModule,

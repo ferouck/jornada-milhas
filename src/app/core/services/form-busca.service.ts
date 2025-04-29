@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MatChipSelectionChange } from '@angular/material/chips';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from 'src/app/shared/modal/modal.component';
 
@@ -15,6 +16,7 @@ export class FormBuscaService {
       somenteIda: new FormControl(false),
       origem: new FormControl(null),
       destino: new FormControl(null),
+      tipo: new FormControl('Economica')
     });
   }
 
@@ -30,5 +32,13 @@ export class FormBuscaService {
     this.dialog.open(ModalComponent, {
       width: '50%'
     });
+  }
+
+  alterarTipo(event: MatChipSelectionChange, tipo: string) {
+    if(event.selected) {
+      this.formBusca.patchValue({
+        tipo
+      })
+    }
   }
 }

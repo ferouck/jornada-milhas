@@ -34,11 +34,11 @@
           search
         </mat-icon>
       </mat-form-field> -->
-      <app-dropdown-uf label="Origem" iconePrefix="flight_takeoff"/>
+      <app-dropdown-uf label="Origem" iconePrefix="flight_takeoff" [control]="formBuscaService.obterControle('origem')" />
       <button mat-icon-button>
         <mat-icon>sync_alt</mat-icon>
       </button>
-      <app-dropdown-uf label="Destino" iconePrefix="flight_land"/>
+      <app-dropdown-uf label="Destino" iconePrefix="flight_land" [control]="formBuscaService.obterControle('destino')" />
       <!-- <mat-form-field class="input-container" appearance="outline">
         <mat-label>Destino</mat-label>
         <mat-icon matPrefix>

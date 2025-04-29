@@ -11,8 +11,8 @@ export class SeletorPassageiroComponent implements ControlValueAccessor {
   @Input() subtitulo: string = '';
 
   value: number = 0;
-  onChange = () => {}
-  onTouch = () => {}
+  onChange = (val: number) => {}
+  onTouch = (val: number) => {}
 
   writeValue(val: any): void {
     this.value = val
@@ -27,4 +27,17 @@ export class SeletorPassageiroComponent implements ControlValueAccessor {
     throw new Error('Method not implemented.');
   }
 
+  incrementar() {
+    this.value += 1;
+    this.onChange(this.value)
+    this.onTouch(this.value)
+  }
+
+  decrementar() {
+    if (this.value > 0) {
+      this.value -= 1;
+      this.onChange(this.value)
+      this.onTouch(this.value)
+    }
+  }
 }
